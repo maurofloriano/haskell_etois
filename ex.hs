@@ -18,3 +18,10 @@ process l1 l2 l3 cond = if cond then ( if  length l1 > 0 then (process (tail l1)
 
 mix_arrays :: [Int] -> [Int] -> [Int]
 mix_arrays l1 l2 = process l1 l2 [] True
+
+
+fibonacci_execution :: Int -> Int
+fibonacci_execution n = if n <= 2 then 1 else (fibonacci_execution (n-1)) + (fibonacci_execution (n-2))
+
+fibonacci :: Int -> [Int]
+fibonacci n = [fibonacci_execution x | x <- [1 .. n]]
