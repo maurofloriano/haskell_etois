@@ -12,3 +12,10 @@ dobroLista = [2*x | x <- [0 .. 10], x/=5]
 
 tuple_test :: Char -> Int -> (Int, String) 
 tuple_test x y = (y+9, x:[x])
+
+
+data Dia = Segunda | Terca | Quarta | Quinta | Sexta | Sabado | Domingo 
+agenda :: Dia -> String 
+agenda Domingo = "TV ..."
+agenda Sabado = "Festa"
+agenda _ = "Trabalho"
